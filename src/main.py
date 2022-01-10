@@ -1131,7 +1131,7 @@ async def speed(ctx, member:discord.Member=None):
 @bot.command()
 @storyline_check()
 async def end(ctx):
-	# del cache[str(ctx.author.id)] # The player will have to replay the game once again to be able to use the command again
+	del cache[str(ctx.author.id)] # The player will have to replay the game once again to be able to use the command again
 	num = await scene_5(ctx)
 	if num == 1:
 		await rapheal_betrayel_1(ctx)
